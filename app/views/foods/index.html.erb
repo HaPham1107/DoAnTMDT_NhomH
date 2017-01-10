@@ -1,3 +1,5 @@
+   
+<div class="container">
    <div id="foods" class="transitions-enabled">
    <% @foods.each do |food| %>
      <div class="box">
@@ -19,3 +21,9 @@
      </div>
      <% end %>
    </div>
+</div>
+
+ <div class="center"> 
+     <%= will_paginate @foods, renderer: BootstrapPagination::Rails %>
+ </div>
+

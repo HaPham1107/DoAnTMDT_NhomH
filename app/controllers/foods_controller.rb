@@ -7,7 +7,7 @@ class FoodsController < ApplicationController
   # GET /foods
   # GET /foods.json
   def index
-     @foods = Food.all.order("created_at DESC")
+     @foods = Food.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /foods/1
